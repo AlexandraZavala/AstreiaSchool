@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://gestadmin.services.astreiasoft.lp2.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="UserWS" targetNamespace="http://gestadmin.services.astreiasoft.lp2.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/AstreiaSoftWebServices/UserWS?xsd=1" namespace="http://gestadmin.services.astreiasoft.lp2.org/" />
+    </xsd:schema>
+  </types>
+  <message name="listarTodosPadresFamiliaPorNombreDNI">
+    <part name="parameters" element="tns:listarTodosPadresFamiliaPorNombreDNI" />
+  </message>
+  <message name="listarTodosPadresFamiliaPorNombreDNIResponse">
+    <part name="parameters" element="tns:listarTodosPadresFamiliaPorNombreDNIResponse" />
+  </message>
+  <message name="insertarPadreFamiliaUsuarioExiste">
+    <part name="parameters" element="tns:insertarPadreFamiliaUsuarioExiste" />
+  </message>
+  <message name="insertarPadreFamiliaUsuarioExisteResponse">
+    <part name="parameters" element="tns:insertarPadreFamiliaUsuarioExisteResponse" />
+  </message>
+  <message name="insertarAdministradorUsuarioExiste">
+    <part name="parameters" element="tns:insertarAdministradorUsuarioExiste" />
+  </message>
+  <message name="insertarAdministradorUsuarioExisteResponse">
+    <part name="parameters" element="tns:insertarAdministradorUsuarioExisteResponse" />
+  </message>
+  <message name="listarTodosAdministradoresAcademicosPorNombreDNI">
+    <part name="parameters" element="tns:listarTodosAdministradoresAcademicosPorNombreDNI" />
+  </message>
+  <message name="listarTodosAdministradoresAcademicosPorNombreDNIResponse">
+    <part name="parameters" element="tns:listarTodosAdministradoresAcademicosPorNombreDNIResponse" />
+  </message>
+  <message name="listarTodosEstudiantesPorNombreDNI">
+    <part name="parameters" element="tns:listarTodosEstudiantesPorNombreDNI" />
+  </message>
+  <message name="listarTodosEstudiantesPorNombreDNIResponse">
+    <part name="parameters" element="tns:listarTodosEstudiantesPorNombreDNIResponse" />
+  </message>
+  <message name="modificarDocente">
+    <part name="parameters" element="tns:modificarDocente" />
+  </message>
+  <message name="modificarDocenteResponse">
+    <part name="parameters" element="tns:modificarDocenteResponse" />
+  </message>
+  <message name="editarPerfil">
+    <part name="parameters" element="tns:editarPerfil" />
+  </message>
+  <message name="editarPerfilResponse">
+    <part name="parameters" element="tns:editarPerfilResponse" />
+  </message>
+  <message name="listarRolesTodos">
+    <part name="parameters" element="tns:listarRolesTodos" />
+  </message>
+  <message name="listarRolesTodosResponse">
+    <part name="parameters" element="tns:listarRolesTodosResponse" />
+  </message>
+  <message name="encontrarUsuario">
+    <part name="parameters" element="tns:encontrarUsuario" />
+  </message>
+  <message name="encontrarUsuarioResponse">
+    <part name="parameters" element="tns:encontrarUsuarioResponse" />
+  </message>
+  <message name="insertarDocente">
+    <part name="parameters" element="tns:insertarDocente" />
+  </message>
+  <message name="insertarDocenteResponse">
+    <part name="parameters" element="tns:insertarDocenteResponse" />
+  </message>
+  <message name="eliminarDocente">
+    <part name="parameters" element="tns:eliminarDocente" />
+  </message>
+  <message name="eliminarDocenteResponse">
+    <part name="parameters" element="tns:eliminarDocenteResponse" />
+  </message>
+  <message name="insertarEstudiante">
+    <part name="parameters" element="tns:insertarEstudiante" />
+  </message>
+  <message name="insertarEstudianteResponse">
+    <part name="parameters" element="tns:insertarEstudianteResponse" />
+  </message>
+  <message name="listarEstudiantesPorSeccion">
+    <part name="parameters" element="tns:listarEstudiantesPorSeccion" />
+  </message>
+  <message name="listarEstudiantesPorSeccionResponse">
+    <part name="parameters" element="tns:listarEstudiantesPorSeccionResponse" />
+  </message>
+  <message name="insertarPadreFamilia">
+    <part name="parameters" element="tns:insertarPadreFamilia" />
+  </message>
+  <message name="insertarPadreFamiliaResponse">
+    <part name="parameters" element="tns:insertarPadreFamiliaResponse" />
+  </message>
+  <message name="asignarSeccionAEstudiante">
+    <part name="parameters" element="tns:asignarSeccionAEstudiante" />
+  </message>
+  <message name="asignarSeccionAEstudianteResponse">
+    <part name="parameters" element="tns:asignarSeccionAEstudianteResponse" />
+  </message>
+  <message name="modificarEstudiante">
+    <part name="parameters" element="tns:modificarEstudiante" />
+  </message>
+  <message name="modificarEstudianteResponse">
+    <part name="parameters" element="tns:modificarEstudianteResponse" />
+  </message>
+  <message name="quitarSeccionDeEstudiante">
+    <part name="parameters" element="tns:quitarSeccionDeEstudiante" />
+  </message>
+  <message name="quitarSeccionDeEstudianteResponse">
+    <part name="parameters" element="tns:quitarSeccionDeEstudianteResponse" />
+  </message>
+  <message name="listarRolesDeUsuario">
+    <part name="parameters" element="tns:listarRolesDeUsuario" />
+  </message>
+  <message name="listarRolesDeUsuarioResponse">
+    <part name="parameters" element="tns:listarRolesDeUsuarioResponse" />
+  </message>
+  <message name="eliminarAdministrador">
+    <part name="parameters" element="tns:eliminarAdministrador" />
+  </message>
+  <message name="eliminarAdministradorResponse">
+    <part name="parameters" element="tns:eliminarAdministradorResponse" />
+  </message>
+  <message name="eliminarEstudiante">
+    <part name="parameters" element="tns:eliminarEstudiante" />
+  </message>
+  <message name="eliminarEstudianteResponse">
+    <part name="parameters" element="tns:eliminarEstudianteResponse" />
+  </message>
+  <message name="insertarDocenteUsuarioExiste">
+    <part name="parameters" element="tns:insertarDocenteUsuarioExiste" />
+  </message>
+  <message name="insertarDocenteUsuarioExisteResponse">
+    <part name="parameters" element="tns:insertarDocenteUsuarioExisteResponse" />
+  </message>
+  <message name="insertarAdministrador">
+    <part name="parameters" element="tns:insertarAdministrador" />
+  </message>
+  <message name="insertarAdministradorResponse">
+    <part name="parameters" element="tns:insertarAdministradorResponse" />
+  </message>
+  <message name="listarTodosDocentesPorNombreDNI">
+    <part name="parameters" element="tns:listarTodosDocentesPorNombreDNI" />
+  </message>
+  <message name="listarTodosDocentesPorNombreDNIResponse">
+    <part name="parameters" element="tns:listarTodosDocentesPorNombreDNIResponse" />
+  </message>
+  <message name="verificarCuentaUsuario">
+    <part name="parameters" element="tns:verificarCuentaUsuario" />
+  </message>
+  <message name="verificarCuentaUsuarioResponse">
+    <part name="parameters" element="tns:verificarCuentaUsuarioResponse" />
+  </message>
+  <message name="listarTodosDocentesCursos">
+    <part name="parameters" element="tns:listarTodosDocentesCursos" />
+  </message>
+  <message name="listarTodosDocentesCursosResponse">
+    <part name="parameters" element="tns:listarTodosDocentesCursosResponse" />
+  </message>
+  <message name="modificarAdministrador">
+    <part name="parameters" element="tns:modificarAdministrador" />
+  </message>
+  <message name="modificarAdministradorResponse">
+    <part name="parameters" element="tns:modificarAdministradorResponse" />
+  </message>
+  <message name="listarEstudiantesPorGrado">
+    <part name="parameters" element="tns:listarEstudiantesPorGrado" />
+  </message>
+  <message name="listarEstudiantesPorGradoResponse">
+    <part name="parameters" element="tns:listarEstudiantesPorGradoResponse" />
+  </message>
+  <message name="eliminarPadreFamilia">
+    <part name="parameters" element="tns:eliminarPadreFamilia" />
+  </message>
+  <message name="eliminarPadreFamiliaResponse">
+    <part name="parameters" element="tns:eliminarPadreFamiliaResponse" />
+  </message>
+  <message name="modificarPadreFamilia">
+    <part name="parameters" element="tns:modificarPadreFamilia" />
+  </message>
+  <message name="modificarPadreFamiliaResponse">
+    <part name="parameters" element="tns:modificarPadreFamiliaResponse" />
+  </message>
+  <message name="asignarRolUsuario">
+    <part name="parameters" element="tns:asignarRolUsuario" />
+  </message>
+  <message name="asignarRolUsuarioResponse">
+    <part name="parameters" element="tns:asignarRolUsuarioResponse" />
+  </message>
+  <message name="listarEstudiantesPorPadreFamilia">
+    <part name="parameters" element="tns:listarEstudiantesPorPadreFamilia" />
+  </message>
+  <message name="listarEstudiantesPorPadreFamiliaResponse">
+    <part name="parameters" element="tns:listarEstudiantesPorPadreFamiliaResponse" />
+  </message>
+  <portType name="UserWS">
+    <operation name="listarTodosPadresFamiliaPorNombreDNI">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosPadresFamiliaPorNombreDNIRequest" message="tns:listarTodosPadresFamiliaPorNombreDNI" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosPadresFamiliaPorNombreDNIResponse" message="tns:listarTodosPadresFamiliaPorNombreDNIResponse" />
+    </operation>
+    <operation name="insertarPadreFamiliaUsuarioExiste">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarPadreFamiliaUsuarioExisteRequest" message="tns:insertarPadreFamiliaUsuarioExiste" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarPadreFamiliaUsuarioExisteResponse" message="tns:insertarPadreFamiliaUsuarioExisteResponse" />
+    </operation>
+    <operation name="insertarAdministradorUsuarioExiste">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarAdministradorUsuarioExisteRequest" message="tns:insertarAdministradorUsuarioExiste" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarAdministradorUsuarioExisteResponse" message="tns:insertarAdministradorUsuarioExisteResponse" />
+    </operation>
+    <operation name="listarTodosAdministradoresAcademicosPorNombreDNI">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosAdministradoresAcademicosPorNombreDNIRequest" message="tns:listarTodosAdministradoresAcademicosPorNombreDNI" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosAdministradoresAcademicosPorNombreDNIResponse" message="tns:listarTodosAdministradoresAcademicosPorNombreDNIResponse" />
+    </operation>
+    <operation name="listarTodosEstudiantesPorNombreDNI">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosEstudiantesPorNombreDNIRequest" message="tns:listarTodosEstudiantesPorNombreDNI" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosEstudiantesPorNombreDNIResponse" message="tns:listarTodosEstudiantesPorNombreDNIResponse" />
+    </operation>
+    <operation name="modificarDocente">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/modificarDocenteRequest" message="tns:modificarDocente" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/modificarDocenteResponse" message="tns:modificarDocenteResponse" />
+    </operation>
+    <operation name="editarPerfil">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/editarPerfilRequest" message="tns:editarPerfil" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/editarPerfilResponse" message="tns:editarPerfilResponse" />
+    </operation>
+    <operation name="listarRolesTodos">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarRolesTodosRequest" message="tns:listarRolesTodos" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarRolesTodosResponse" message="tns:listarRolesTodosResponse" />
+    </operation>
+    <operation name="encontrarUsuario">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/encontrarUsuarioRequest" message="tns:encontrarUsuario" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/encontrarUsuarioResponse" message="tns:encontrarUsuarioResponse" />
+    </operation>
+    <operation name="insertarDocente">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarDocenteRequest" message="tns:insertarDocente" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarDocenteResponse" message="tns:insertarDocenteResponse" />
+    </operation>
+    <operation name="eliminarDocente">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/eliminarDocenteRequest" message="tns:eliminarDocente" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/eliminarDocenteResponse" message="tns:eliminarDocenteResponse" />
+    </operation>
+    <operation name="insertarEstudiante">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarEstudianteRequest" message="tns:insertarEstudiante" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarEstudianteResponse" message="tns:insertarEstudianteResponse" />
+    </operation>
+    <operation name="listarEstudiantesPorSeccion">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarEstudiantesPorSeccionRequest" message="tns:listarEstudiantesPorSeccion" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarEstudiantesPorSeccionResponse" message="tns:listarEstudiantesPorSeccionResponse" />
+    </operation>
+    <operation name="insertarPadreFamilia">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarPadreFamiliaRequest" message="tns:insertarPadreFamilia" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarPadreFamiliaResponse" message="tns:insertarPadreFamiliaResponse" />
+    </operation>
+    <operation name="asignarSeccionAEstudiante">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/asignarSeccionAEstudianteRequest" message="tns:asignarSeccionAEstudiante" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/asignarSeccionAEstudianteResponse" message="tns:asignarSeccionAEstudianteResponse" />
+    </operation>
+    <operation name="modificarEstudiante">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/modificarEstudianteRequest" message="tns:modificarEstudiante" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/modificarEstudianteResponse" message="tns:modificarEstudianteResponse" />
+    </operation>
+    <operation name="quitarSeccionDeEstudiante">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/quitarSeccionDeEstudianteRequest" message="tns:quitarSeccionDeEstudiante" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/quitarSeccionDeEstudianteResponse" message="tns:quitarSeccionDeEstudianteResponse" />
+    </operation>
+    <operation name="listarRolesDeUsuario">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarRolesDeUsuarioRequest" message="tns:listarRolesDeUsuario" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarRolesDeUsuarioResponse" message="tns:listarRolesDeUsuarioResponse" />
+    </operation>
+    <operation name="eliminarAdministrador">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
+    </operation>
+    <operation name="eliminarEstudiante">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/eliminarEstudianteRequest" message="tns:eliminarEstudiante" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/eliminarEstudianteResponse" message="tns:eliminarEstudianteResponse" />
+    </operation>
+    <operation name="insertarDocenteUsuarioExiste">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarDocenteUsuarioExisteRequest" message="tns:insertarDocenteUsuarioExiste" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarDocenteUsuarioExisteResponse" message="tns:insertarDocenteUsuarioExisteResponse" />
+    </operation>
+    <operation name="insertarAdministrador">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarAdministradorRequest" message="tns:insertarAdministrador" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/insertarAdministradorResponse" message="tns:insertarAdministradorResponse" />
+    </operation>
+    <operation name="listarTodosDocentesPorNombreDNI">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosDocentesPorNombreDNIRequest" message="tns:listarTodosDocentesPorNombreDNI" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosDocentesPorNombreDNIResponse" message="tns:listarTodosDocentesPorNombreDNIResponse" />
+    </operation>
+    <operation name="verificarCuentaUsuario">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/verificarCuentaUsuarioRequest" message="tns:verificarCuentaUsuario" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/verificarCuentaUsuarioResponse" message="tns:verificarCuentaUsuarioResponse" />
+    </operation>
+    <operation name="listarTodosDocentesCursos">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosDocentesCursosRequest" message="tns:listarTodosDocentesCursos" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarTodosDocentesCursosResponse" message="tns:listarTodosDocentesCursosResponse" />
+    </operation>
+    <operation name="modificarAdministrador">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/modificarAdministradorRequest" message="tns:modificarAdministrador" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/modificarAdministradorResponse" message="tns:modificarAdministradorResponse" />
+    </operation>
+    <operation name="listarEstudiantesPorGrado">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarEstudiantesPorGradoRequest" message="tns:listarEstudiantesPorGrado" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarEstudiantesPorGradoResponse" message="tns:listarEstudiantesPorGradoResponse" />
+    </operation>
+    <operation name="eliminarPadreFamilia">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/eliminarPadreFamiliaRequest" message="tns:eliminarPadreFamilia" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/eliminarPadreFamiliaResponse" message="tns:eliminarPadreFamiliaResponse" />
+    </operation>
+    <operation name="modificarPadreFamilia">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/modificarPadreFamiliaRequest" message="tns:modificarPadreFamilia" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/modificarPadreFamiliaResponse" message="tns:modificarPadreFamiliaResponse" />
+    </operation>
+    <operation name="asignarRolUsuario">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/asignarRolUsuarioRequest" message="tns:asignarRolUsuario" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/asignarRolUsuarioResponse" message="tns:asignarRolUsuarioResponse" />
+    </operation>
+    <operation name="listarEstudiantesPorPadreFamilia">
+      <input wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarEstudiantesPorPadreFamiliaRequest" message="tns:listarEstudiantesPorPadreFamilia" />
+      <output wsam:Action="http://gestadmin.services.astreiasoft.lp2.org/UserWS/listarEstudiantesPorPadreFamiliaResponse" message="tns:listarEstudiantesPorPadreFamiliaResponse" />
+    </operation>
+  </portType>
+  <binding name="UserWSPortBinding" type="tns:UserWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarTodosPadresFamiliaPorNombreDNI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPadreFamiliaUsuarioExiste">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAdministradorUsuarioExiste">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosAdministradoresAcademicosPorNombreDNI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosEstudiantesPorNombreDNI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editarPerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarRolesTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="encontrarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEstudiantesPorSeccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPadreFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="asignarSeccionAEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="quitarSeccionDeEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarRolesDeUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarDocenteUsuarioExiste">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosDocentesPorNombreDNI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarCuentaUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosDocentesCursos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEstudiantesPorGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPadreFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPadreFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="asignarRolUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEstudiantesPorPadreFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UserWS">
+    <port name="UserWSPort" binding="tns:UserWSPortBinding">
+      <soap:address location="http://localhost:8080/AstreiaSoftWebServices/UserWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="AdminWS">
+      <implementation-class>org.lp2.astreiasoft.services.gestacad.AdminWS</implementation-class>
+    </service>
+    <service name="MallaWS">
+      <implementation-class>org.lp2.astreiasoft.services.gestacad.MallaWS</implementation-class>
+    </service>
+    <service name="InfraWS">
+      <implementation-class>org.lp2.astreiasoft.services.gestadmin.InfraWS</implementation-class>
+    </service>
+    <service name="UserWS">
+      <implementation-class>org.lp2.astreiasoft.services.gestadmin.UserWS</implementation-class>
+    </service>
+  </services>
+  <clients/>
+  <jsr109>true</jsr109>
+</jax-ws>
