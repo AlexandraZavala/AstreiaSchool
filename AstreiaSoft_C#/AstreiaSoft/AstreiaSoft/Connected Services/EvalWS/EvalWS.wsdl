@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://gestacad.services.astreiasoft.lp2.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="EvalWS" targetNamespace="http://gestacad.services.astreiasoft.lp2.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/AstreiaSoftWebServices/EvalWS?xsd=1" namespace="http://gestacad.services.astreiasoft.lp2.org/" />
+    </xsd:schema>
+  </types>
+  <message name="listarEvaluacionesPorNombre">
+    <part name="parameters" element="tns:listarEvaluacionesPorNombre" />
+  </message>
+  <message name="listarEvaluacionesPorNombreResponse">
+    <part name="parameters" element="tns:listarEvaluacionesPorNombreResponse" />
+  </message>
+  <message name="modificarBimestre">
+    <part name="parameters" element="tns:modificarBimestre" />
+  </message>
+  <message name="modificarBimestreResponse">
+    <part name="parameters" element="tns:modificarBimestreResponse" />
+  </message>
+  <message name="modificarEvaluacion">
+    <part name="parameters" element="tns:modificarEvaluacion" />
+  </message>
+  <message name="modificarEvaluacionResponse">
+    <part name="parameters" element="tns:modificarEvaluacionResponse" />
+  </message>
+  <message name="eliminarEvaluacion">
+    <part name="parameters" element="tns:eliminarEvaluacion" />
+  </message>
+  <message name="eliminarEvaluacionResponse">
+    <part name="parameters" element="tns:eliminarEvaluacionResponse" />
+  </message>
+  <message name="modificarNotaEvaluacion">
+    <part name="parameters" element="tns:modificarNotaEvaluacion" />
+  </message>
+  <message name="modificarNotaEvaluacionResponse">
+    <part name="parameters" element="tns:modificarNotaEvaluacionResponse" />
+  </message>
+  <message name="insertarReclamoCalificacion">
+    <part name="parameters" element="tns:insertarReclamoCalificacion" />
+  </message>
+  <message name="insertarReclamoCalificacionResponse">
+    <part name="parameters" element="tns:insertarReclamoCalificacionResponse" />
+  </message>
+  <message name="eliminarNotaEvaluacion">
+    <part name="parameters" element="tns:eliminarNotaEvaluacion" />
+  </message>
+  <message name="eliminarNotaEvaluacionResponse">
+    <part name="parameters" element="tns:eliminarNotaEvaluacionResponse" />
+  </message>
+  <message name="listarEntregasPorEvaluacion">
+    <part name="parameters" element="tns:listarEntregasPorEvaluacion" />
+  </message>
+  <message name="listarEntregasPorEvaluacionResponse">
+    <part name="parameters" element="tns:listarEntregasPorEvaluacionResponse" />
+  </message>
+  <message name="insertarNotaEvaluacion">
+    <part name="parameters" element="tns:insertarNotaEvaluacion" />
+  </message>
+  <message name="insertarNotaEvaluacionResponse">
+    <part name="parameters" element="tns:insertarNotaEvaluacionResponse" />
+  </message>
+  <message name="listarTiposEvaluacion">
+    <part name="parameters" element="tns:listarTiposEvaluacion" />
+  </message>
+  <message name="listarTiposEvaluacionResponse">
+    <part name="parameters" element="tns:listarTiposEvaluacionResponse" />
+  </message>
+  <message name="listarNotaEvaluacion">
+    <part name="parameters" element="tns:listarNotaEvaluacion" />
+  </message>
+  <message name="listarNotaEvaluacionResponse">
+    <part name="parameters" element="tns:listarNotaEvaluacionResponse" />
+  </message>
+  <message name="modificarEntregaYNota">
+    <part name="parameters" element="tns:modificarEntregaYNota" />
+  </message>
+  <message name="modificarEntregaYNotaResponse">
+    <part name="parameters" element="tns:modificarEntregaYNotaResponse" />
+  </message>
+  <message name="insertarEvaluacion">
+    <part name="parameters" element="tns:insertarEvaluacion" />
+  </message>
+  <message name="insertarEvaluacionResponse">
+    <part name="parameters" element="tns:insertarEvaluacionResponse" />
+  </message>
+  <message name="generarReporteDeNotas">
+    <part name="parameters" element="tns:generarReporteDeNotas" />
+  </message>
+  <message name="generarReporteDeNotasResponse">
+    <part name="parameters" element="tns:generarReporteDeNotasResponse" />
+  </message>
+  <message name="eliminarReclamoCalificacion">
+    <part name="parameters" element="tns:eliminarReclamoCalificacion" />
+  </message>
+  <message name="eliminarReclamoCalificacionResponse">
+    <part name="parameters" element="tns:eliminarReclamoCalificacionResponse" />
+  </message>
+  <message name="listarReclamoCalificaciones">
+    <part name="parameters" element="tns:listarReclamoCalificaciones" />
+  </message>
+  <message name="listarReclamoCalificacionesResponse">
+    <part name="parameters" element="tns:listarReclamoCalificacionesResponse" />
+  </message>
+  <message name="modificarReclamoCalificacion">
+    <part name="parameters" element="tns:modificarReclamoCalificacion" />
+  </message>
+  <message name="modificarReclamoCalificacionResponse">
+    <part name="parameters" element="tns:modificarReclamoCalificacionResponse" />
+  </message>
+  <message name="modificarEntrega">
+    <part name="parameters" element="tns:modificarEntrega" />
+  </message>
+  <message name="modificarEntregaResponse">
+    <part name="parameters" element="tns:modificarEntregaResponse" />
+  </message>
+  <message name="eliminarBimestre">
+    <part name="parameters" element="tns:eliminarBimestre" />
+  </message>
+  <message name="eliminarBimestreResponse">
+    <part name="parameters" element="tns:eliminarBimestreResponse" />
+  </message>
+  <message name="listarEntrega">
+    <part name="parameters" element="tns:listarEntrega" />
+  </message>
+  <message name="listarEntregaResponse">
+    <part name="parameters" element="tns:listarEntregaResponse" />
+  </message>
+  <message name="listarBimestres">
+    <part name="parameters" element="tns:listarBimestres" />
+  </message>
+  <message name="listarBimestresResponse">
+    <part name="parameters" element="tns:listarBimestresResponse" />
+  </message>
+  <message name="insertarBimestre">
+    <part name="parameters" element="tns:insertarBimestre" />
+  </message>
+  <message name="insertarBimestreResponse">
+    <part name="parameters" element="tns:insertarBimestreResponse" />
+  </message>
+  <message name="eliminarEntrega">
+    <part name="parameters" element="tns:eliminarEntrega" />
+  </message>
+  <message name="eliminarEntregaResponse">
+    <part name="parameters" element="tns:eliminarEntregaResponse" />
+  </message>
+  <message name="insertarEntrega">
+    <part name="parameters" element="tns:insertarEntrega" />
+  </message>
+  <message name="insertarEntregaResponse">
+    <part name="parameters" element="tns:insertarEntregaResponse" />
+  </message>
+  <message name="listarEvaluacion">
+    <part name="parameters" element="tns:listarEvaluacion" />
+  </message>
+  <message name="listarEvaluacionResponse">
+    <part name="parameters" element="tns:listarEvaluacionResponse" />
+  </message>
+  <message name="listarEvaluacionesConEntregasYUltimaNota">
+    <part name="parameters" element="tns:listarEvaluacionesConEntregasYUltimaNota" />
+  </message>
+  <message name="listarEvaluacionesConEntregasYUltimaNotaResponse">
+    <part name="parameters" element="tns:listarEvaluacionesConEntregasYUltimaNotaResponse" />
+  </message>
+  <portType name="EvalWS">
+    <operation name="listarEvaluacionesPorNombre">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEvaluacionesPorNombreRequest" message="tns:listarEvaluacionesPorNombre" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEvaluacionesPorNombreResponse" message="tns:listarEvaluacionesPorNombreResponse" />
+    </operation>
+    <operation name="modificarBimestre">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarBimestreRequest" message="tns:modificarBimestre" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarBimestreResponse" message="tns:modificarBimestreResponse" />
+    </operation>
+    <operation name="modificarEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarEvaluacionRequest" message="tns:modificarEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarEvaluacionResponse" message="tns:modificarEvaluacionResponse" />
+    </operation>
+    <operation name="eliminarEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarEvaluacionRequest" message="tns:eliminarEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarEvaluacionResponse" message="tns:eliminarEvaluacionResponse" />
+    </operation>
+    <operation name="modificarNotaEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarNotaEvaluacionRequest" message="tns:modificarNotaEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarNotaEvaluacionResponse" message="tns:modificarNotaEvaluacionResponse" />
+    </operation>
+    <operation name="insertarReclamoCalificacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarReclamoCalificacionRequest" message="tns:insertarReclamoCalificacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarReclamoCalificacionResponse" message="tns:insertarReclamoCalificacionResponse" />
+    </operation>
+    <operation name="eliminarNotaEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarNotaEvaluacionRequest" message="tns:eliminarNotaEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarNotaEvaluacionResponse" message="tns:eliminarNotaEvaluacionResponse" />
+    </operation>
+    <operation name="listarEntregasPorEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEntregasPorEvaluacionRequest" message="tns:listarEntregasPorEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEntregasPorEvaluacionResponse" message="tns:listarEntregasPorEvaluacionResponse" />
+    </operation>
+    <operation name="insertarNotaEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarNotaEvaluacionRequest" message="tns:insertarNotaEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarNotaEvaluacionResponse" message="tns:insertarNotaEvaluacionResponse" />
+    </operation>
+    <operation name="listarTiposEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarTiposEvaluacionRequest" message="tns:listarTiposEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarTiposEvaluacionResponse" message="tns:listarTiposEvaluacionResponse" />
+    </operation>
+    <operation name="listarNotaEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarNotaEvaluacionRequest" message="tns:listarNotaEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarNotaEvaluacionResponse" message="tns:listarNotaEvaluacionResponse" />
+    </operation>
+    <operation name="modificarEntregaYNota">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarEntregaYNotaRequest" message="tns:modificarEntregaYNota" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarEntregaYNotaResponse" message="tns:modificarEntregaYNotaResponse" />
+    </operation>
+    <operation name="insertarEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarEvaluacionRequest" message="tns:insertarEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarEvaluacionResponse" message="tns:insertarEvaluacionResponse" />
+    </operation>
+    <operation name="generarReporteDeNotas">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/generarReporteDeNotasRequest" message="tns:generarReporteDeNotas" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/generarReporteDeNotasResponse" message="tns:generarReporteDeNotasResponse" />
+    </operation>
+    <operation name="eliminarReclamoCalificacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarReclamoCalificacionRequest" message="tns:eliminarReclamoCalificacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarReclamoCalificacionResponse" message="tns:eliminarReclamoCalificacionResponse" />
+    </operation>
+    <operation name="listarReclamoCalificaciones">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarReclamoCalificacionesRequest" message="tns:listarReclamoCalificaciones" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarReclamoCalificacionesResponse" message="tns:listarReclamoCalificacionesResponse" />
+    </operation>
+    <operation name="modificarReclamoCalificacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarReclamoCalificacionRequest" message="tns:modificarReclamoCalificacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarReclamoCalificacionResponse" message="tns:modificarReclamoCalificacionResponse" />
+    </operation>
+    <operation name="modificarEntrega">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarEntregaRequest" message="tns:modificarEntrega" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/modificarEntregaResponse" message="tns:modificarEntregaResponse" />
+    </operation>
+    <operation name="eliminarBimestre">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarBimestreRequest" message="tns:eliminarBimestre" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarBimestreResponse" message="tns:eliminarBimestreResponse" />
+    </operation>
+    <operation name="listarEntrega">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEntregaRequest" message="tns:listarEntrega" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEntregaResponse" message="tns:listarEntregaResponse" />
+    </operation>
+    <operation name="listarBimestres">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarBimestresRequest" message="tns:listarBimestres" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarBimestresResponse" message="tns:listarBimestresResponse" />
+    </operation>
+    <operation name="insertarBimestre">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarBimestreRequest" message="tns:insertarBimestre" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarBimestreResponse" message="tns:insertarBimestreResponse" />
+    </operation>
+    <operation name="eliminarEntrega">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarEntregaRequest" message="tns:eliminarEntrega" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/eliminarEntregaResponse" message="tns:eliminarEntregaResponse" />
+    </operation>
+    <operation name="insertarEntrega">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarEntregaRequest" message="tns:insertarEntrega" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/insertarEntregaResponse" message="tns:insertarEntregaResponse" />
+    </operation>
+    <operation name="listarEvaluacion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEvaluacionRequest" message="tns:listarEvaluacion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEvaluacionResponse" message="tns:listarEvaluacionResponse" />
+    </operation>
+    <operation name="listarEvaluacionesConEntregasYUltimaNota">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEvaluacionesConEntregasYUltimaNotaRequest" message="tns:listarEvaluacionesConEntregasYUltimaNota" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/EvalWS/listarEvaluacionesConEntregasYUltimaNotaResponse" message="tns:listarEvaluacionesConEntregasYUltimaNotaResponse" />
+    </operation>
+  </portType>
+  <binding name="EvalWSPortBinding" type="tns:EvalWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarEvaluacionesPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarBimestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarNotaEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarReclamoCalificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarNotaEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEntregasPorEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarNotaEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTiposEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarNotaEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEntregaYNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReporteDeNotas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarReclamoCalificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReclamoCalificaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarReclamoCalificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarBimestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarBimestres">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarBimestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvaluacionesConEntregasYUltimaNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EvalWS">
+    <port name="EvalWSPort" binding="tns:EvalWSPortBinding">
+      <soap:address location="http://localhost:8080/AstreiaSoftWebServices/EvalWS" />
+    </port>
+  </service>
+</definitions>

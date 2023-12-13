@@ -1,0 +1,1491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B326DA18-66C1-4EB9-807D-0B16ABA4E190}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AstreiaSoft</RootNamespace>
+    <AssemblyName>AstreiaSoft</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\AdminWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EvalWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\InfraWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MallaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UserWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Alumno\frmBusqTareasAsignadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Alumno\frmBusqTareasAsignadas.designer.cs">
+      <DependentUpon>frmBusqTareasAsignadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Alumno\frmGestEntregasAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Alumno\frmGestEntregasAlumno.designer.cs">
+      <DependentUpon>frmGestEntregasAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Docente\frmBuscarEntregas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Docente\frmBuscarEntregas.designer.cs">
+      <DependentUpon>frmBuscarEntregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Docente\frmBuscarTareasAsignadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Docente\frmBuscarTareasAsignadas.designer.cs">
+      <DependentUpon>frmBuscarTareasAsignadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Docente\frmGestNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Docente\frmGestNotas.designer.cs">
+      <DependentUpon>frmGestNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Docente\frmGestTareasDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Docente\frmGestTareasDocente.designer.cs">
+      <DependentUpon>frmGestTareasDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Estado.cs" />
+    <Compile Include="src\frmBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmBienvenida.Designer.cs">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmBimestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmBimestre.Designer.cs">
+      <DependentUpon>frmBimestre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Asistencia\frmBuscarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Asistencia\frmBuscarAsistencia.Designer.cs">
+      <DependentUpon>frmBuscarAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmBuscarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmBuscarEstudiante.Designer.cs">
+      <DependentUpon>frmBuscarEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Evento\frmBuscarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Evento\frmBuscarEvento.Designer.cs">
+      <DependentUpon>frmBuscarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmBuscarInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmBuscarInscripcion.Designer.cs">
+      <DependentUpon>frmBuscarInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmNotasUnEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmNotasUnEstudiante.designer.cs">
+      <DependentUpon>frmNotasUnEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmReporteNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmReporteNotas.Designer.cs">
+      <DependentUpon>frmReporteNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Matricula\frmBuscarMatriculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Matricula\frmBuscarMatriculas.Designer.cs">
+      <DependentUpon>frmBuscarMatriculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\PreInscripcion\frmBuscarPreinscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PreInscripcion\frmBuscarPreinscripcion.Designer.cs">
+      <DependentUpon>frmBuscarPreinscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmCursoAlumDoce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmCursoAlumDoce.Designer.cs">
+      <DependentUpon>frmCursoAlumDoce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmDetallesTareaDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmDetallesTareaDocente.Designer.cs">
+      <DependentUpon>frmDetallesTareaDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmEditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmEditarPerfil.Designer.cs">
+      <DependentUpon>frmEditarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\EventoEstudiante\frmEventosEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\EventoEstudiante\frmEventosEstudiante.Designer.cs">
+      <DependentUpon>frmEventosEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestAreaCurricular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestAreaCurricular.Designer.cs">
+      <DependentUpon>frmGestAreaCurricular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Asistencia\frmGestAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Asistencia\frmGestAsistencia.designer.cs">
+      <DependentUpon>frmGestAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestAulas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestAulas.Designer.cs">
+      <DependentUpon>frmGestAulas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestCursoProgra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestCursoProgra.Designer.cs">
+      <DependentUpon>frmGestCursoProgra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Evento\frmGestEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Evento\frmGestEvento.Designer.cs">
+      <DependentUpon>frmGestEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestHorario.Designer.cs">
+      <DependentUpon>frmGestHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Inscripcion\frmGestInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Inscripcion\frmGestInscripcion.Designer.cs">
+      <DependentUpon>frmGestInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FrmGestionarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\FrmGestionarCurso.designer.cs">
+      <DependentUpon>FrmGestionarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestionMalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestionMalla.designer.cs">
+      <DependentUpon>frmGestionMalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestionMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestionMaterial.Designer.cs">
+      <DependentUpon>frmGestionMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestMateriales.Designer.cs">
+      <DependentUpon>frmGestMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Matricula\frmGestMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Matricula\frmGestMatricula.Designer.cs">
+      <DependentUpon>frmGestMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestSecciones.Designer.cs">
+      <DependentUpon>frmGestSecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmGestUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmGestUsuarios.Designer.cs">
+      <DependentUpon>frmGestUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmImgSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmImgSeccion.Designer.cs">
+      <DependentUpon>frmImgSeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\PreInscripcion\frmIntencionMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PreInscripcion\frmIntencionMatricula.Designer.cs">
+      <DependentUpon>frmIntencionMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmListarReclamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmListarReclamos.Designer.cs">
+      <DependentUpon>frmListarReclamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmPantallaLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmPantallaLogIn.Designer.cs">
+      <DependentUpon>frmPantallaLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmPantallaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmPantallaPerfil.Designer.cs">
+      <DependentUpon>frmPantallaPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmPantallaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmPantallaPrincipal.Designer.cs">
+      <DependentUpon>frmPantallaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmReclamoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmReclamoAlumno.Designer.cs">
+      <DependentUpon>frmReclamoAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Inscripcion\frmRevisionPreInscripciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Inscripcion\frmRevisionPreInscripciones.Designer.cs">
+      <DependentUpon>frmRevisionPreInscripciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmUnCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmUnCurso.Designer.cs">
+      <DependentUpon>frmUnCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmUnMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmUnMaterial.Designer.cs">
+      <DependentUpon>frmUnMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmVentanaMostrarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmVentanaMostrarCurso.Designer.cs">
+      <DependentUpon>frmVentanaMostrarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frmVisualizarHijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frmVisualizarHijos.Designer.cs">
+      <DependentUpon>frmVisualizarHijos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\frm_DetalleEvaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\frm_DetalleEvaluacion.Designer.cs">
+      <DependentUpon>frm_DetalleEvaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Program.cs" />
+    <Compile Include="src\PreInscripcion\ucEstudianteRegistrado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\PreInscripcion\ucEstudianteRegistrado.Designer.cs">
+      <DependentUpon>ucEstudianteRegistrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\EventoEstudiante\ucEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\EventoEstudiante\ucEvento.Designer.cs">
+      <DependentUpon>ucEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\EventoEstudiante\ucEventoNuevo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\EventoEstudiante\ucEventoNuevo.Designer.cs">
+      <DependentUpon>ucEventoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\EventoEstudiante\ucMensajeEventos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\EventoEstudiante\ucMensajeEventos.designer.cs">
+      <DependentUpon>ucMensajeEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\PreInscripcion\ucNuevoEstudiante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\PreInscripcion\ucNuevoEstudiante.Designer.cs">
+      <DependentUpon>ucNuevoEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmAgregarHijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmAgregarHijo.designer.cs">
+      <DependentUpon>frmAgregarHijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmBusquedaAdminsAcads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmBusquedaAdminsAcads.Designer.cs">
+      <DependentUpon>frmBusquedaAdminsAcads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmBusquedaDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmBusquedaDocentes.Designer.cs">
+      <DependentUpon>frmBusquedaDocentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmBusquedaEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmBusquedaEstudiantes.Designer.cs">
+      <DependentUpon>frmBusquedaEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmBusquedaPadreFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmBusquedaPadreFamilias.designer.cs">
+      <DependentUpon>frmBusquedaPadreFamilias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmGestAdminAcad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmGestAdminAcad.Designer.cs">
+      <DependentUpon>frmGestAdminAcad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmGestDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmGestDocente.designer.cs">
+      <DependentUpon>frmGestDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmGestEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmGestEstudiantes.Designer.cs">
+      <DependentUpon>frmGestEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Usuario\frmGestPadreFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Usuario\frmGestPadreFamilia.designer.cs">
+      <DependentUpon>frmGestPadreFamilia.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Alumno\frmBusqTareasAsignadas.resx">
+      <DependentUpon>frmBusqTareasAsignadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Alumno\frmGestEntregasAlumno.resx">
+      <DependentUpon>frmGestEntregasAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Docente\frmBuscarEntregas.resx">
+      <DependentUpon>frmBuscarEntregas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Docente\frmBuscarTareasAsignadas.resx">
+      <DependentUpon>frmBuscarTareasAsignadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Docente\frmGestNotas.resx">
+      <DependentUpon>frmGestNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Docente\frmGestTareasDocente.resx">
+      <DependentUpon>frmGestTareasDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmBienvenida.resx">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmBimestre.resx">
+      <DependentUpon>frmBimestre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Asistencia\frmBuscarAsistencia.resx">
+      <DependentUpon>frmBuscarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmBuscarEstudiante.resx">
+      <DependentUpon>frmBuscarEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Evento\frmBuscarEvento.resx">
+      <DependentUpon>frmBuscarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmBuscarInscripcion.resx">
+      <DependentUpon>frmBuscarInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmNotasUnEstudiante.resx">
+      <DependentUpon>frmNotasUnEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmReporteNotas.resx">
+      <DependentUpon>frmReporteNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Matricula\frmBuscarMatriculas.resx">
+      <DependentUpon>frmBuscarMatriculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PreInscripcion\frmBuscarPreinscripcion.resx">
+      <DependentUpon>frmBuscarPreinscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmCursoAlumDoce.resx">
+      <DependentUpon>frmCursoAlumDoce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmDetallesTareaDocente.resx">
+      <DependentUpon>frmDetallesTareaDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmEditarPerfil.resx">
+      <DependentUpon>frmEditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\EventoEstudiante\frmEventosEstudiante.resx">
+      <DependentUpon>frmEventosEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestAreaCurricular.resx">
+      <DependentUpon>frmGestAreaCurricular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Asistencia\frmGestAsistencia.resx">
+      <DependentUpon>frmGestAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestAulas.resx">
+      <DependentUpon>frmGestAulas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestCursoProgra.resx">
+      <DependentUpon>frmGestCursoProgra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Evento\frmGestEvento.resx">
+      <DependentUpon>frmGestEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestHorario.resx">
+      <DependentUpon>frmGestHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Inscripcion\frmGestInscripcion.resx">
+      <DependentUpon>frmGestInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FrmGestionarCurso.resx">
+      <DependentUpon>FrmGestionarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestionMalla.resx">
+      <DependentUpon>frmGestionMalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestionMaterial.resx">
+      <DependentUpon>frmGestionMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestMateriales.resx">
+      <DependentUpon>frmGestMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Matricula\frmGestMatricula.resx">
+      <DependentUpon>frmGestMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestSecciones.resx">
+      <DependentUpon>frmGestSecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmGestUsuarios.resx">
+      <DependentUpon>frmGestUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmImgSeccion.resx">
+      <DependentUpon>frmImgSeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PreInscripcion\frmIntencionMatricula.resx">
+      <DependentUpon>frmIntencionMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmListarReclamos.resx">
+      <DependentUpon>frmListarReclamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmPantallaLogIn.resx">
+      <DependentUpon>frmPantallaLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmPantallaPerfil.resx">
+      <DependentUpon>frmPantallaPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmPantallaPrincipal.resx">
+      <DependentUpon>frmPantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmReclamoAlumno.resx">
+      <DependentUpon>frmReclamoAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Inscripcion\frmRevisionPreInscripciones.resx">
+      <DependentUpon>frmRevisionPreInscripciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmUnCurso.resx">
+      <DependentUpon>frmUnCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmUnMaterial.resx">
+      <DependentUpon>frmUnMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmVentanaMostrarCurso.resx">
+      <DependentUpon>frmVentanaMostrarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frmVisualizarHijos.resx">
+      <DependentUpon>frmVisualizarHijos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\frm_DetalleEvaluacion.resx">
+      <DependentUpon>frm_DetalleEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PreInscripcion\ucEstudianteRegistrado.resx">
+      <DependentUpon>ucEstudianteRegistrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\EventoEstudiante\ucEvento.resx">
+      <DependentUpon>ucEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\EventoEstudiante\ucEventoNuevo.resx">
+      <DependentUpon>ucEventoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\EventoEstudiante\ucMensajeEventos.resx">
+      <DependentUpon>ucMensajeEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PreInscripcion\ucNuevoEstudiante.resx">
+      <DependentUpon>ucNuevoEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmAgregarHijo.resx">
+      <DependentUpon>frmAgregarHijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmBusquedaAdminsAcads.resx">
+      <DependentUpon>frmBusquedaAdminsAcads.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmBusquedaDocentes.resx">
+      <DependentUpon>frmBusquedaDocentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmBusquedaEstudiantes.resx">
+      <DependentUpon>frmBusquedaEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmBusquedaPadreFamilias.resx">
+      <DependentUpon>frmBusquedaPadreFamilias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmGestAdminAcad.resx">
+      <DependentUpon>frmGestAdminAcad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmGestDocente.resx">
+      <DependentUpon>frmGestDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmGestEstudiantes.resx">
+      <DependentUpon>frmGestEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Usuario\frmGestPadreFamilia.resx">
+      <DependentUpon>frmGestPadreFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\AdminWS\AdminWS.wsdl" />
+    <None Include="Connected Services\AdminWS\AdminWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.asistencia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.cancelarInscripcionEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.decidirInscripcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.eliminarAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.eliminarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.eliminarInscripcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.eliminarMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.estudiante.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.evento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.grado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.horario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.inscribirEstudianteEnEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.inscripcion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.insertarAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.insertarEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.insertarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.insertarInscripcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.insertarMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarAnhosMatriculacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarEstudiantesDelCursoProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarEventosInscritosPorEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarEventosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarEventosPorNombreYFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarGradosActivosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarHijosDePadreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarHorariosDelCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarMatriculasPorAnhoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarPorPadreEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarPorPadreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarPreinscripcionesPorEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarPreinscripcionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarTodasAsistenciasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarTodasInscripcionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarTodasMatriculasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.listarTodosEventosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.matricula.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.modificarAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.modificarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.modificarInscripcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.modificarMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.obtenerOListarAsistenciasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminWS\AstreiaSoft.AdminWS.verificarMatriculaParaPreinscripcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.bimestre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.eliminarBimestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.eliminarEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.eliminarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.eliminarNotaEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.eliminarReclamoCalificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.entrega.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.evaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.evaluacionConEntrega.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.generarReporteDeNotasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.insertarBimestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.insertarEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.insertarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.insertarNotaEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.insertarReclamoCalificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarBimestresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarEntregasPorEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarEvaluacionesConEntregasYUltimaNotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarEvaluacionesPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarNotaEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarReclamoCalificacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.listarTiposEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.modificarBimestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.modificarEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.modificarEntregaYNotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.modificarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.modificarNotaEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.modificarReclamoCalificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.notaEvaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\AstreiaSoft.EvalWS.reclamoCalificacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvalWS\EvalWS.wsdl" />
+    <None Include="Connected Services\EvalWS\EvalWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.asignarAulaXSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.aula.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.eliminarAulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.eliminarSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.generarReporteAnualPorAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.grado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.insertarAulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.insertarSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.listarAulasDetalleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.listarAulaTodasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.listarEstPorSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.listarGradosTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.listarNivelesEducativosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.listarSeccionesTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.listarSeccionPorIdGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.modificarAulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.modificarSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.nivelEducativo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.seccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\AstreiaSoft.InfraWS.vericarAulaEnSeccionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfraWS\InfraWS.wsdl" />
+    <None Include="Connected Services\InfraWS\InfraWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.areaCurricular.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.asignarDocenteCursoProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.asignarEstudiantesCursoProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.cursoProgramado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.eliminarAreaCurricularResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.eliminarCursoProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.eliminarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.eliminarHorarioCursDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.eliminarHorarioCursEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.eliminarHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.eliminarHorariosCursoProResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.eliminarMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.encontrarCursoProgramadoPorCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.grado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.horario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.insertarAreaCurricularResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.insertarCursoProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.insertarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.insertarHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.insertarMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarAreaCurricularResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarAreasNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarCursosNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarCursosPorUsuarioYAnioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarCursosPrograGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarCursosProgramadosPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarCursosPrograNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarCursosPrograTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarGradosTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarHorarioPorIdDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarHorarioPorSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarMaterialesPorCursoProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.listarMaterialesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.material.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.modificarAreaCurricularResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.modificarCursoProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.modificarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.modificarHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.modificarMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.obtenerNombreAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.obtenerNombreCursoHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.obtenerNombreCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.obtenerNombreDocenteHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.verificarAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.verificarCursoProgramadoDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.verificarCursoProgramadoEstudiantesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.verificarCursoProgramadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.verificarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.verificarEliminarAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\AstreiaSoft.MallaWS.verificarEliminarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MallaWS\MallaWS.wsdl" />
+    <None Include="Connected Services\MallaWS\MallaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.administradorAcademico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.asignarRolUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.asignarSeccionAEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.docente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.editarPerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.eliminarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.eliminarDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.eliminarEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.eliminarPadreFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.encontrarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.estudiante.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.insertarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.insertarAdministradorUsuarioExisteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.insertarDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.insertarDocenteUsuarioExisteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.insertarEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.insertarPadreFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.insertarPadreFamiliaUsuarioExisteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarEstudiantesPorGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarEstudiantesPorPadreFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarEstudiantesPorSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarRolesDeUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarRolesTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarTodosAdministradoresAcademicosPorNombreDNIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarTodosDocentesCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarTodosDocentesPorNombreDNIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarTodosEstudiantesPorNombreDNIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.listarTodosPadresFamiliaPorNombreDNIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.modificarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.modificarDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.modificarEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.modificarPadreFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.obtenerNombreDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.obtenerNombreGradoSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.obtenerSeccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.padreFamilia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.quitarSeccionDeEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.rol.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\AstreiaSoft.UserWS.verificarCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserWS\UserWS.wsdl" />
+    <None Include="Connected Services\UserWS\UserWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aHT6ZAVbBJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro-abierto3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inscripcion-abierta1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hogar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\familia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libros1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evento1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloj1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloj11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aula1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anuncio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloj4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anuncio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizarra2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AstreiaLOGO.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AstreiaLOGOjpeg.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AstreiaLOGOjpeg1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AstreiaSchoolLogo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ASTREIA_LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar-el-archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-buscar-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-guardar-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-editar-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-eliminar-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo-contra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-ojo-blanco-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-ojo-blanco-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-guardar-251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-editar-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-buscar-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-eliminar-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-seleccionar-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-nuevo-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-nuevo-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-guardar-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-editar-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-buscar-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-eliminar-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-seleccionar-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-cancelar-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-subir-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-subir-151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiseñoHorario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenHorario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cole.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-empty-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-agregar-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-quitar-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AdminWS\" />
+    <WCFMetadataStorage Include="Connected Services\EvalWS\" />
+    <WCFMetadataStorage Include="Connected Services\InfraWS\" />
+    <WCFMetadataStorage Include="Connected Services\MallaWS\" />
+    <WCFMetadataStorage Include="Connected Services\UserWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MallaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MallaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MallaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InfraWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InfraWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InfraWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EvalWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EvalWS\configuration.svcinfo" />
+    <None Include="Connected Services\EvalWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="logo.ico" />
+    <None Include="Resources\foto_sin_perfil.jpg" />
+    <Content Include="Resources\Icon1.ico" />
+    <None Include="Resources\img-cerrar-sesion-40.png" />
+    <Content Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

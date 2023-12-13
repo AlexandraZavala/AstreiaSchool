@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://gestacad.services.astreiasoft.lp2.org/" targetNamespace="http://gestacad.services.astreiasoft.lp2.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarBimestre" type="tns:eliminarBimestre" />
+  <xs:element name="eliminarBimestreResponse" type="tns:eliminarBimestreResponse" />
+  <xs:element name="eliminarEntrega" type="tns:eliminarEntrega" />
+  <xs:element name="eliminarEntregaResponse" type="tns:eliminarEntregaResponse" />
+  <xs:element name="eliminarEvaluacion" type="tns:eliminarEvaluacion" />
+  <xs:element name="eliminarEvaluacionResponse" type="tns:eliminarEvaluacionResponse" />
+  <xs:element name="eliminarNotaEvaluacion" type="tns:eliminarNotaEvaluacion" />
+  <xs:element name="eliminarNotaEvaluacionResponse" type="tns:eliminarNotaEvaluacionResponse" />
+  <xs:element name="eliminarReclamoCalificacion" type="tns:eliminarReclamoCalificacion" />
+  <xs:element name="eliminarReclamoCalificacionResponse" type="tns:eliminarReclamoCalificacionResponse" />
+  <xs:element name="generarReporteDeNotas" type="tns:generarReporteDeNotas" />
+  <xs:element name="generarReporteDeNotasResponse" type="tns:generarReporteDeNotasResponse" />
+  <xs:element name="insertarBimestre" type="tns:insertarBimestre" />
+  <xs:element name="insertarBimestreResponse" type="tns:insertarBimestreResponse" />
+  <xs:element name="insertarEntrega" type="tns:insertarEntrega" />
+  <xs:element name="insertarEntregaResponse" type="tns:insertarEntregaResponse" />
+  <xs:element name="insertarEvaluacion" type="tns:insertarEvaluacion" />
+  <xs:element name="insertarEvaluacionResponse" type="tns:insertarEvaluacionResponse" />
+  <xs:element name="insertarNotaEvaluacion" type="tns:insertarNotaEvaluacion" />
+  <xs:element name="insertarNotaEvaluacionResponse" type="tns:insertarNotaEvaluacionResponse" />
+  <xs:element name="insertarReclamoCalificacion" type="tns:insertarReclamoCalificacion" />
+  <xs:element name="insertarReclamoCalificacionResponse" type="tns:insertarReclamoCalificacionResponse" />
+  <xs:element name="listarBimestres" type="tns:listarBimestres" />
+  <xs:element name="listarBimestresResponse" type="tns:listarBimestresResponse" />
+  <xs:element name="listarEntrega" type="tns:listarEntrega" />
+  <xs:element name="listarEntregaResponse" type="tns:listarEntregaResponse" />
+  <xs:element name="listarEntregasPorEvaluacion" type="tns:listarEntregasPorEvaluacion" />
+  <xs:element name="listarEntregasPorEvaluacionResponse" type="tns:listarEntregasPorEvaluacionResponse" />
+  <xs:element name="listarEvaluacion" type="tns:listarEvaluacion" />
+  <xs:element name="listarEvaluacionResponse" type="tns:listarEvaluacionResponse" />
+  <xs:element name="listarEvaluacionesConEntregasYUltimaNota" type="tns:listarEvaluacionesConEntregasYUltimaNota" />
+  <xs:element name="listarEvaluacionesConEntregasYUltimaNotaResponse" type="tns:listarEvaluacionesConEntregasYUltimaNotaResponse" />
+  <xs:element name="listarEvaluacionesPorNombre" type="tns:listarEvaluacionesPorNombre" />
+  <xs:element name="listarEvaluacionesPorNombreResponse" type="tns:listarEvaluacionesPorNombreResponse" />
+  <xs:element name="listarNotaEvaluacion" type="tns:listarNotaEvaluacion" />
+  <xs:element name="listarNotaEvaluacionResponse" type="tns:listarNotaEvaluacionResponse" />
+  <xs:element name="listarReclamoCalificaciones" type="tns:listarReclamoCalificaciones" />
+  <xs:element name="listarReclamoCalificacionesResponse" type="tns:listarReclamoCalificacionesResponse" />
+  <xs:element name="listarTiposEvaluacion" type="tns:listarTiposEvaluacion" />
+  <xs:element name="listarTiposEvaluacionResponse" type="tns:listarTiposEvaluacionResponse" />
+  <xs:element name="modificarBimestre" type="tns:modificarBimestre" />
+  <xs:element name="modificarBimestreResponse" type="tns:modificarBimestreResponse" />
+  <xs:element name="modificarEntrega" type="tns:modificarEntrega" />
+  <xs:element name="modificarEntregaResponse" type="tns:modificarEntregaResponse" />
+  <xs:element name="modificarEntregaYNota" type="tns:modificarEntregaYNota" />
+  <xs:element name="modificarEntregaYNotaResponse" type="tns:modificarEntregaYNotaResponse" />
+  <xs:element name="modificarEvaluacion" type="tns:modificarEvaluacion" />
+  <xs:element name="modificarEvaluacionResponse" type="tns:modificarEvaluacionResponse" />
+  <xs:element name="modificarNotaEvaluacion" type="tns:modificarNotaEvaluacion" />
+  <xs:element name="modificarNotaEvaluacionResponse" type="tns:modificarNotaEvaluacionResponse" />
+  <xs:element name="modificarReclamoCalificacion" type="tns:modificarReclamoCalificacion" />
+  <xs:element name="modificarReclamoCalificacionResponse" type="tns:modificarReclamoCalificacionResponse" />
+  <xs:complexType name="insertarNotaEvaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notaEvaluacion" type="tns:notaEvaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="notaEvaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detalle" type="xs:string" />
+      <xs:element minOccurs="0" name="entrega" type="tns:entrega" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="idNotaEvaluacion" type="xs:int" />
+      <xs:element name="puntajeObtenido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="estado" type="tns:estadoEntrega" />
+      <xs:element minOccurs="0" name="estudiante" type="tns:estudiante" />
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+      <xs:element minOccurs="0" name="fechaEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRevision" type="xs:dateTime" />
+      <xs:element name="idEntrega" type="xs:int" />
+      <xs:element minOccurs="0" name="observaciones" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estudiante">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="aula" type="tns:aula" />
+          <xs:element minOccurs="0" name="grado" type="tns:grado" />
+          <xs:element name="idEstudiante" type="xs:int" />
+          <xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+          <xs:element minOccurs="0" name="padre" type="tns:padreFamilia" />
+          <xs:element minOccurs="0" name="seccion" type="tns:seccion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="DNI" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="genero" type="xs:string" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="tns:rol" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aula">
+    <xs:sequence>
+      <xs:element name="capacidad" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="tns:estadoAula" />
+      <xs:element name="idAula" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="seccion" type="tns:seccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="seccion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="anho" type="xs:int" />
+      <xs:element minOccurs="0" name="aula" type="tns:aula" />
+      <xs:element minOccurs="0" name="grado" type="tns:grado" />
+      <xs:element name="idSeccion" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="grado">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="estudiantes" nillable="true" type="tns:estudiante" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
+      <xs:element name="idGrado" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelEducativo" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="padreFamilia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="hijos" nillable="true" type="tns:estudiante" />
+          <xs:element name="numeroHijos" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="rol">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idRol" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="tns:nombreRol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="bimestre" type="tns:bimestre" />
+      <xs:element minOccurs="0" name="cursoProgramado" type="tns:cursoProgramado" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="docente" type="tns:docente" />
+      <xs:element minOccurs="0" name="fechaLimite" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSubido" type="xs:dateTime" />
+      <xs:element name="idEvaluacion" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="nota" type="xs:double" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoEvaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bimestre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="finPeriodo" type="xs:dateTime" />
+      <xs:element name="idBimestre" type="xs:int" />
+      <xs:element minOccurs="0" name="inicioPeriodo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cursoProgramado">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="anho" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="areas" nillable="true" type="tns:evaluacion" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="docentes" nillable="true" type="tns:docente" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="estudiantes" nillable="true" type="tns:estudiante" />
+      <xs:element name="idCursoProgramado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="materiales" nillable="true" type="tns:material" />
+      <xs:element minOccurs="0" name="nombreCursoGrado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="areaCurricular" type="tns:areaCurricular" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaModificacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="grado" type="tns:grado" />
+      <xs:element name="horasSemanales" type="xs:int" />
+      <xs:element name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreGrado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="areaCurricular">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
+      <xs:element name="idAreaCurricular" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="docente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:empleado">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="especialidad" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="empleado">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fechaContratacion" type="xs:dateTime" />
+          <xs:element name="salario" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="material">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="cursoProgramado" type="tns:cursoProgramado" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaModificacion" type="xs:dateTime" />
+      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNotaEvaluacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarBimestre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bimestre" type="tns:bimestre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarBimestreResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReclamoCalificacion">
+    <xs:sequence>
+      <xs:element name="idReclamoCalificacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReclamoCalificacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarReclamoCalificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reclamoCalificacion" type="tns:reclamoCalificacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reclamoCalificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="tns:estadoEntrega" />
+      <xs:element minOccurs="0" name="fechaReclamo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRespuesta" type="xs:dateTime" />
+      <xs:element name="idReclamoCalificacion" type="xs:int" />
+      <xs:element minOccurs="0" name="nota" type="tns:notaEvaluacion" />
+      <xs:element minOccurs="0" name="respuesta" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarReclamoCalificacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEntrega">
+    <xs:sequence>
+      <xs:element name="idEntrega" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEntregaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarNotaEvaluacion">
+    <xs:sequence>
+      <xs:element name="idNotaEvaluacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarNotaEvaluacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBimestre">
+    <xs:sequence>
+      <xs:element name="idBimestre" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBimestreResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBimestres">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarBimestresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:bimestre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionesConEntregasYUltimaNota">
+    <xs:sequence>
+      <xs:element name="idCursoProgramado" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionesConEntregasYUltimaNotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacionConEntrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evaluacionConEntrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entrega" type="tns:entrega" />
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+      <xs:element minOccurs="0" name="notaEvaluacion" type="tns:notaEvaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEvaluacion">
+    <xs:sequence>
+      <xs:element name="idEvaluacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEvaluacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarReclamoCalificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reclamoCalificacion" type="tns:reclamoCalificacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarReclamoCalificacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarNotaEvaluacion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarNotaEvaluacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:notaEvaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEntrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entrega" type="tns:entrega" />
+      <xs:element name="idEvaluacion" type="xs:int" />
+      <xs:element name="idEstudiante" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEntregaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEntrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bimestre" type="tns:entrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEntregaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBimestre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bimestre" type="tns:bimestre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBimestreResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEntregaYNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notaEvaluacion" type="tns:notaEvaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEntregaYNotaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarNotaEvaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notaEvaluacion" type="tns:notaEvaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarNotaEvaluacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEvaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEvaluacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionesPorNombre">
+    <xs:sequence>
+      <xs:element name="idCursoProgramado" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreEvaluacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionesPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTiposEvaluacion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTiposEvaluacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEvaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEvaluacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEntrega">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEntregaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:entrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarReclamoCalificaciones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarReclamoCalificacionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reclamoCalificacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEntregasPorEvaluacion">
+    <xs:sequence>
+      <xs:element name="idEvaluacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEntregasPorEvaluacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:notaEvaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteDeNotas">
+    <xs:sequence>
+      <xs:element name="idHorario" type="xs:int" />
+      <xs:element name="idBimestre" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCurso" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreDocente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteDeNotasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="estadoEntrega">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pendiente" />
+      <xs:enumeration value="Completado" />
+      <xs:enumeration value="Anulado" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="estadoAula">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Operativo" />
+      <xs:enumeration value="Inoperativo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nivelEducativo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Primaria" />
+      <xs:enumeration value="Secundaria" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nombreRol">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Estudiante" />
+      <xs:enumeration value="PadreFamilia" />
+      <xs:enumeration value="Docente" />
+      <xs:enumeration value="AdministradorAcademico" />
+      <xs:enumeration value="AdministradorSistema" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoEvaluacion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Tarea" />
+      <xs:enumeration value="Practica" />
+      <xs:enumeration value="Examen" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

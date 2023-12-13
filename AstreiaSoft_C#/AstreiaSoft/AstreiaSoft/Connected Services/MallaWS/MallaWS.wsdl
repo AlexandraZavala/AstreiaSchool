@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://gestacad.services.astreiasoft.lp2.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MallaWS" targetNamespace="http://gestacad.services.astreiasoft.lp2.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/AstreiaSoftWebServices/MallaWS?xsd=1" namespace="http://gestacad.services.astreiasoft.lp2.org/" />
+    </xsd:schema>
+  </types>
+  <message name="asignarEstudiantesCursoProgramado">
+    <part name="parameters" element="tns:asignarEstudiantesCursoProgramado" />
+  </message>
+  <message name="asignarEstudiantesCursoProgramadoResponse">
+    <part name="parameters" element="tns:asignarEstudiantesCursoProgramadoResponse" />
+  </message>
+  <message name="verificarCursoProgramadoEstudiantes">
+    <part name="parameters" element="tns:verificarCursoProgramadoEstudiantes" />
+  </message>
+  <message name="verificarCursoProgramadoEstudiantesResponse">
+    <part name="parameters" element="tns:verificarCursoProgramadoEstudiantesResponse" />
+  </message>
+  <message name="listarCursosProgramadosPorUsuario">
+    <part name="parameters" element="tns:listarCursosProgramadosPorUsuario" />
+  </message>
+  <message name="listarCursosProgramadosPorUsuarioResponse">
+    <part name="parameters" element="tns:listarCursosProgramadosPorUsuarioResponse" />
+  </message>
+  <message name="listarMaterialesPorCursoProgramado">
+    <part name="parameters" element="tns:listarMaterialesPorCursoProgramado" />
+  </message>
+  <message name="listarMaterialesPorCursoProgramadoResponse">
+    <part name="parameters" element="tns:listarMaterialesPorCursoProgramadoResponse" />
+  </message>
+  <message name="eliminarHorarioCursEstudiante">
+    <part name="parameters" element="tns:eliminarHorarioCursEstudiante" />
+  </message>
+  <message name="eliminarHorarioCursEstudianteResponse">
+    <part name="parameters" element="tns:eliminarHorarioCursEstudianteResponse" />
+  </message>
+  <message name="eliminarHorarioCursDocente">
+    <part name="parameters" element="tns:eliminarHorarioCursDocente" />
+  </message>
+  <message name="eliminarHorarioCursDocenteResponse">
+    <part name="parameters" element="tns:eliminarHorarioCursDocenteResponse" />
+  </message>
+  <message name="obtenerNombreCurso">
+    <part name="parameters" element="tns:obtenerNombreCurso" />
+  </message>
+  <message name="obtenerNombreCursoResponse">
+    <part name="parameters" element="tns:obtenerNombreCursoResponse" />
+  </message>
+  <message name="listarAreaCurricular">
+    <part name="parameters" element="tns:listarAreaCurricular" />
+  </message>
+  <message name="listarAreaCurricularResponse">
+    <part name="parameters" element="tns:listarAreaCurricularResponse" />
+  </message>
+  <message name="verificarEliminarArea">
+    <part name="parameters" element="tns:verificarEliminarArea" />
+  </message>
+  <message name="verificarEliminarAreaResponse">
+    <part name="parameters" element="tns:verificarEliminarAreaResponse" />
+  </message>
+  <message name="listarAreasNombre">
+    <part name="parameters" element="tns:listarAreasNombre" />
+  </message>
+  <message name="listarAreasNombreResponse">
+    <part name="parameters" element="tns:listarAreasNombreResponse" />
+  </message>
+  <message name="listarCursosPrograNombre">
+    <part name="parameters" element="tns:listarCursosPrograNombre" />
+  </message>
+  <message name="listarCursosPrograNombreResponse">
+    <part name="parameters" element="tns:listarCursosPrograNombreResponse" />
+  </message>
+  <message name="insertarAreaCurricular">
+    <part name="parameters" element="tns:insertarAreaCurricular" />
+  </message>
+  <message name="insertarAreaCurricularResponse">
+    <part name="parameters" element="tns:insertarAreaCurricularResponse" />
+  </message>
+  <message name="obtenerNombreArea">
+    <part name="parameters" element="tns:obtenerNombreArea" />
+  </message>
+  <message name="obtenerNombreAreaResponse">
+    <part name="parameters" element="tns:obtenerNombreAreaResponse" />
+  </message>
+  <message name="asignarDocenteCursoProgramado">
+    <part name="parameters" element="tns:asignarDocenteCursoProgramado" />
+  </message>
+  <message name="asignarDocenteCursoProgramadoResponse">
+    <part name="parameters" element="tns:asignarDocenteCursoProgramadoResponse" />
+  </message>
+  <message name="eliminarAreaCurricular">
+    <part name="parameters" element="tns:eliminarAreaCurricular" />
+  </message>
+  <message name="eliminarAreaCurricularResponse">
+    <part name="parameters" element="tns:eliminarAreaCurricularResponse" />
+  </message>
+  <message name="modificarAreaCurricular">
+    <part name="parameters" element="tns:modificarAreaCurricular" />
+  </message>
+  <message name="modificarAreaCurricularResponse">
+    <part name="parameters" element="tns:modificarAreaCurricularResponse" />
+  </message>
+  <message name="listarCursosPrograTodos">
+    <part name="parameters" element="tns:listarCursosPrograTodos" />
+  </message>
+  <message name="listarCursosPrograTodosResponse">
+    <part name="parameters" element="tns:listarCursosPrograTodosResponse" />
+  </message>
+  <message name="listarCursosPrograGrado">
+    <part name="parameters" element="tns:listarCursosPrograGrado" />
+  </message>
+  <message name="listarCursosPrograGradoResponse">
+    <part name="parameters" element="tns:listarCursosPrograGradoResponse" />
+  </message>
+  <message name="insertarCursoProgramado">
+    <part name="parameters" element="tns:insertarCursoProgramado" />
+  </message>
+  <message name="insertarCursoProgramadoResponse">
+    <part name="parameters" element="tns:insertarCursoProgramadoResponse" />
+  </message>
+  <message name="modificarCursoProgramado">
+    <part name="parameters" element="tns:modificarCursoProgramado" />
+  </message>
+  <message name="modificarCursoProgramadoResponse">
+    <part name="parameters" element="tns:modificarCursoProgramadoResponse" />
+  </message>
+  <message name="eliminarCursoProgramado">
+    <part name="parameters" element="tns:eliminarCursoProgramado" />
+  </message>
+  <message name="eliminarCursoProgramadoResponse">
+    <part name="parameters" element="tns:eliminarCursoProgramadoResponse" />
+  </message>
+  <message name="eliminarHorariosCursoPro">
+    <part name="parameters" element="tns:eliminarHorariosCursoPro" />
+  </message>
+  <message name="eliminarHorariosCursoProResponse">
+    <part name="parameters" element="tns:eliminarHorariosCursoProResponse" />
+  </message>
+  <message name="obtenerNombreDocenteHorario">
+    <part name="parameters" element="tns:obtenerNombreDocenteHorario" />
+  </message>
+  <message name="obtenerNombreDocenteHorarioResponse">
+    <part name="parameters" element="tns:obtenerNombreDocenteHorarioResponse" />
+  </message>
+  <message name="modificarMaterial">
+    <part name="parameters" element="tns:modificarMaterial" />
+  </message>
+  <message name="modificarMaterialResponse">
+    <part name="parameters" element="tns:modificarMaterialResponse" />
+  </message>
+  <message name="obtenerNombreCursoHorario">
+    <part name="parameters" element="tns:obtenerNombreCursoHorario" />
+  </message>
+  <message name="obtenerNombreCursoHorarioResponse">
+    <part name="parameters" element="tns:obtenerNombreCursoHorarioResponse" />
+  </message>
+  <message name="listarCursosPorUsuarioYAnio">
+    <part name="parameters" element="tns:listarCursosPorUsuarioYAnio" />
+  </message>
+  <message name="listarCursosPorUsuarioYAnioResponse">
+    <part name="parameters" element="tns:listarCursosPorUsuarioYAnioResponse" />
+  </message>
+  <message name="listarGradosTodos">
+    <part name="parameters" element="tns:listarGradosTodos" />
+  </message>
+  <message name="listarGradosTodosResponse">
+    <part name="parameters" element="tns:listarGradosTodosResponse" />
+  </message>
+  <message name="listarHorarioPorSeccion">
+    <part name="parameters" element="tns:listarHorarioPorSeccion" />
+  </message>
+  <message name="listarHorarioPorSeccionResponse">
+    <part name="parameters" element="tns:listarHorarioPorSeccionResponse" />
+  </message>
+  <message name="encontrarCursoProgramadoPorCurso">
+    <part name="parameters" element="tns:encontrarCursoProgramadoPorCurso" />
+  </message>
+  <message name="encontrarCursoProgramadoPorCursoResponse">
+    <part name="parameters" element="tns:encontrarCursoProgramadoPorCursoResponse" />
+  </message>
+  <message name="verificarEliminarCurso">
+    <part name="parameters" element="tns:verificarEliminarCurso" />
+  </message>
+  <message name="verificarEliminarCursoResponse">
+    <part name="parameters" element="tns:verificarEliminarCursoResponse" />
+  </message>
+  <message name="listarCursosNombre">
+    <part name="parameters" element="tns:listarCursosNombre" />
+  </message>
+  <message name="listarCursosNombreResponse">
+    <part name="parameters" element="tns:listarCursosNombreResponse" />
+  </message>
+  <message name="verificarCursoProgramado">
+    <part name="parameters" element="tns:verificarCursoProgramado" />
+  </message>
+  <message name="verificarCursoProgramadoResponse">
+    <part name="parameters" element="tns:verificarCursoProgramadoResponse" />
+  </message>
+  <message name="listarHorarioPorIdDocente">
+    <part name="parameters" element="tns:listarHorarioPorIdDocente" />
+  </message>
+  <message name="listarHorarioPorIdDocenteResponse">
+    <part name="parameters" element="tns:listarHorarioPorIdDocenteResponse" />
+  </message>
+  <message name="verificarCursoProgramadoDocente">
+    <part name="parameters" element="tns:verificarCursoProgramadoDocente" />
+  </message>
+  <message name="verificarCursoProgramadoDocenteResponse">
+    <part name="parameters" element="tns:verificarCursoProgramadoDocenteResponse" />
+  </message>
+  <message name="verificarArea">
+    <part name="parameters" element="tns:verificarArea" />
+  </message>
+  <message name="verificarAreaResponse">
+    <part name="parameters" element="tns:verificarAreaResponse" />
+  </message>
+  <message name="modificarCurso">
+    <part name="parameters" element="tns:modificarCurso" />
+  </message>
+  <message name="modificarCursoResponse">
+    <part name="parameters" element="tns:modificarCursoResponse" />
+  </message>
+  <message name="insertarHorario">
+    <part name="parameters" element="tns:insertarHorario" />
+  </message>
+  <message name="insertarHorarioResponse">
+    <part name="parameters" element="tns:insertarHorarioResponse" />
+  </message>
+  <message name="listarCursos">
+    <part name="parameters" element="tns:listarCursos" />
+  </message>
+  <message name="listarCursosResponse">
+    <part name="parameters" element="tns:listarCursosResponse" />
+  </message>
+  <message name="listarMateriales">
+    <part name="parameters" element="tns:listarMateriales" />
+  </message>
+  <message name="listarMaterialesResponse">
+    <part name="parameters" element="tns:listarMaterialesResponse" />
+  </message>
+  <message name="eliminarMaterial">
+    <part name="parameters" element="tns:eliminarMaterial" />
+  </message>
+  <message name="eliminarMaterialResponse">
+    <part name="parameters" element="tns:eliminarMaterialResponse" />
+  </message>
+  <message name="verificarCurso">
+    <part name="parameters" element="tns:verificarCurso" />
+  </message>
+  <message name="verificarCursoResponse">
+    <part name="parameters" element="tns:verificarCursoResponse" />
+  </message>
+  <message name="modificarHorario">
+    <part name="parameters" element="tns:modificarHorario" />
+  </message>
+  <message name="modificarHorarioResponse">
+    <part name="parameters" element="tns:modificarHorarioResponse" />
+  </message>
+  <message name="eliminarHorario">
+    <part name="parameters" element="tns:eliminarHorario" />
+  </message>
+  <message name="eliminarHorarioResponse">
+    <part name="parameters" element="tns:eliminarHorarioResponse" />
+  </message>
+  <message name="insertarMaterial">
+    <part name="parameters" element="tns:insertarMaterial" />
+  </message>
+  <message name="insertarMaterialResponse">
+    <part name="parameters" element="tns:insertarMaterialResponse" />
+  </message>
+  <message name="eliminarCurso">
+    <part name="parameters" element="tns:eliminarCurso" />
+  </message>
+  <message name="eliminarCursoResponse">
+    <part name="parameters" element="tns:eliminarCursoResponse" />
+  </message>
+  <message name="insertarCurso">
+    <part name="parameters" element="tns:insertarCurso" />
+  </message>
+  <message name="insertarCursoResponse">
+    <part name="parameters" element="tns:insertarCursoResponse" />
+  </message>
+  <portType name="MallaWS">
+    <operation name="asignarEstudiantesCursoProgramado">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/asignarEstudiantesCursoProgramadoRequest" message="tns:asignarEstudiantesCursoProgramado" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/asignarEstudiantesCursoProgramadoResponse" message="tns:asignarEstudiantesCursoProgramadoResponse" />
+    </operation>
+    <operation name="verificarCursoProgramadoEstudiantes">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarCursoProgramadoEstudiantesRequest" message="tns:verificarCursoProgramadoEstudiantes" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarCursoProgramadoEstudiantesResponse" message="tns:verificarCursoProgramadoEstudiantesResponse" />
+    </operation>
+    <operation name="listarCursosProgramadosPorUsuario">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosProgramadosPorUsuarioRequest" message="tns:listarCursosProgramadosPorUsuario" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosProgramadosPorUsuarioResponse" message="tns:listarCursosProgramadosPorUsuarioResponse" />
+    </operation>
+    <operation name="listarMaterialesPorCursoProgramado">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarMaterialesPorCursoProgramadoRequest" message="tns:listarMaterialesPorCursoProgramado" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarMaterialesPorCursoProgramadoResponse" message="tns:listarMaterialesPorCursoProgramadoResponse" />
+    </operation>
+    <operation name="eliminarHorarioCursEstudiante">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarHorarioCursEstudianteRequest" message="tns:eliminarHorarioCursEstudiante" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarHorarioCursEstudianteResponse" message="tns:eliminarHorarioCursEstudianteResponse" />
+    </operation>
+    <operation name="eliminarHorarioCursDocente">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarHorarioCursDocenteRequest" message="tns:eliminarHorarioCursDocente" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarHorarioCursDocenteResponse" message="tns:eliminarHorarioCursDocenteResponse" />
+    </operation>
+    <operation name="obtenerNombreCurso">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/obtenerNombreCursoRequest" message="tns:obtenerNombreCurso" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/obtenerNombreCursoResponse" message="tns:obtenerNombreCursoResponse" />
+    </operation>
+    <operation name="listarAreaCurricular">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarAreaCurricularRequest" message="tns:listarAreaCurricular" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarAreaCurricularResponse" message="tns:listarAreaCurricularResponse" />
+    </operation>
+    <operation name="verificarEliminarArea">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarEliminarAreaRequest" message="tns:verificarEliminarArea" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarEliminarAreaResponse" message="tns:verificarEliminarAreaResponse" />
+    </operation>
+    <operation name="listarAreasNombre">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarAreasNombreRequest" message="tns:listarAreasNombre" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarAreasNombreResponse" message="tns:listarAreasNombreResponse" />
+    </operation>
+    <operation name="listarCursosPrograNombre">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosPrograNombreRequest" message="tns:listarCursosPrograNombre" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosPrograNombreResponse" message="tns:listarCursosPrograNombreResponse" />
+    </operation>
+    <operation name="insertarAreaCurricular">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarAreaCurricularRequest" message="tns:insertarAreaCurricular" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarAreaCurricularResponse" message="tns:insertarAreaCurricularResponse" />
+    </operation>
+    <operation name="obtenerNombreArea">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/obtenerNombreAreaRequest" message="tns:obtenerNombreArea" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/obtenerNombreAreaResponse" message="tns:obtenerNombreAreaResponse" />
+    </operation>
+    <operation name="asignarDocenteCursoProgramado">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/asignarDocenteCursoProgramadoRequest" message="tns:asignarDocenteCursoProgramado" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/asignarDocenteCursoProgramadoResponse" message="tns:asignarDocenteCursoProgramadoResponse" />
+    </operation>
+    <operation name="eliminarAreaCurricular">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarAreaCurricularRequest" message="tns:eliminarAreaCurricular" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarAreaCurricularResponse" message="tns:eliminarAreaCurricularResponse" />
+    </operation>
+    <operation name="modificarAreaCurricular">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarAreaCurricularRequest" message="tns:modificarAreaCurricular" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarAreaCurricularResponse" message="tns:modificarAreaCurricularResponse" />
+    </operation>
+    <operation name="listarCursosPrograTodos">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosPrograTodosRequest" message="tns:listarCursosPrograTodos" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosPrograTodosResponse" message="tns:listarCursosPrograTodosResponse" />
+    </operation>
+    <operation name="listarCursosPrograGrado">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosPrograGradoRequest" message="tns:listarCursosPrograGrado" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosPrograGradoResponse" message="tns:listarCursosPrograGradoResponse" />
+    </operation>
+    <operation name="insertarCursoProgramado">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarCursoProgramadoRequest" message="tns:insertarCursoProgramado" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarCursoProgramadoResponse" message="tns:insertarCursoProgramadoResponse" />
+    </operation>
+    <operation name="modificarCursoProgramado">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarCursoProgramadoRequest" message="tns:modificarCursoProgramado" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarCursoProgramadoResponse" message="tns:modificarCursoProgramadoResponse" />
+    </operation>
+    <operation name="eliminarCursoProgramado">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarCursoProgramadoRequest" message="tns:eliminarCursoProgramado" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarCursoProgramadoResponse" message="tns:eliminarCursoProgramadoResponse" />
+    </operation>
+    <operation name="eliminarHorariosCursoPro">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarHorariosCursoProRequest" message="tns:eliminarHorariosCursoPro" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarHorariosCursoProResponse" message="tns:eliminarHorariosCursoProResponse" />
+    </operation>
+    <operation name="obtenerNombreDocenteHorario">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/obtenerNombreDocenteHorarioRequest" message="tns:obtenerNombreDocenteHorario" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/obtenerNombreDocenteHorarioResponse" message="tns:obtenerNombreDocenteHorarioResponse" />
+    </operation>
+    <operation name="modificarMaterial">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarMaterialRequest" message="tns:modificarMaterial" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarMaterialResponse" message="tns:modificarMaterialResponse" />
+    </operation>
+    <operation name="obtenerNombreCursoHorario">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/obtenerNombreCursoHorarioRequest" message="tns:obtenerNombreCursoHorario" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/obtenerNombreCursoHorarioResponse" message="tns:obtenerNombreCursoHorarioResponse" />
+    </operation>
+    <operation name="listarCursosPorUsuarioYAnio">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosPorUsuarioYAnioRequest" message="tns:listarCursosPorUsuarioYAnio" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosPorUsuarioYAnioResponse" message="tns:listarCursosPorUsuarioYAnioResponse" />
+    </operation>
+    <operation name="listarGradosTodos">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarGradosTodosRequest" message="tns:listarGradosTodos" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarGradosTodosResponse" message="tns:listarGradosTodosResponse" />
+    </operation>
+    <operation name="listarHorarioPorSeccion">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarHorarioPorSeccionRequest" message="tns:listarHorarioPorSeccion" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarHorarioPorSeccionResponse" message="tns:listarHorarioPorSeccionResponse" />
+    </operation>
+    <operation name="encontrarCursoProgramadoPorCurso">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/encontrarCursoProgramadoPorCursoRequest" message="tns:encontrarCursoProgramadoPorCurso" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/encontrarCursoProgramadoPorCursoResponse" message="tns:encontrarCursoProgramadoPorCursoResponse" />
+    </operation>
+    <operation name="verificarEliminarCurso">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarEliminarCursoRequest" message="tns:verificarEliminarCurso" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarEliminarCursoResponse" message="tns:verificarEliminarCursoResponse" />
+    </operation>
+    <operation name="listarCursosNombre">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosNombreRequest" message="tns:listarCursosNombre" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosNombreResponse" message="tns:listarCursosNombreResponse" />
+    </operation>
+    <operation name="verificarCursoProgramado">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarCursoProgramadoRequest" message="tns:verificarCursoProgramado" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarCursoProgramadoResponse" message="tns:verificarCursoProgramadoResponse" />
+    </operation>
+    <operation name="listarHorarioPorIdDocente">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarHorarioPorIdDocenteRequest" message="tns:listarHorarioPorIdDocente" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarHorarioPorIdDocenteResponse" message="tns:listarHorarioPorIdDocenteResponse" />
+    </operation>
+    <operation name="verificarCursoProgramadoDocente">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarCursoProgramadoDocenteRequest" message="tns:verificarCursoProgramadoDocente" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarCursoProgramadoDocenteResponse" message="tns:verificarCursoProgramadoDocenteResponse" />
+    </operation>
+    <operation name="verificarArea">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarAreaRequest" message="tns:verificarArea" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarAreaResponse" message="tns:verificarAreaResponse" />
+    </operation>
+    <operation name="modificarCurso">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarCursoRequest" message="tns:modificarCurso" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarCursoResponse" message="tns:modificarCursoResponse" />
+    </operation>
+    <operation name="insertarHorario">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarHorarioRequest" message="tns:insertarHorario" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarHorarioResponse" message="tns:insertarHorarioResponse" />
+    </operation>
+    <operation name="listarCursos">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosRequest" message="tns:listarCursos" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarCursosResponse" message="tns:listarCursosResponse" />
+    </operation>
+    <operation name="listarMateriales">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarMaterialesRequest" message="tns:listarMateriales" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/listarMaterialesResponse" message="tns:listarMaterialesResponse" />
+    </operation>
+    <operation name="eliminarMaterial">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarMaterialRequest" message="tns:eliminarMaterial" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarMaterialResponse" message="tns:eliminarMaterialResponse" />
+    </operation>
+    <operation name="verificarCurso">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarCursoRequest" message="tns:verificarCurso" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/verificarCursoResponse" message="tns:verificarCursoResponse" />
+    </operation>
+    <operation name="modificarHorario">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarHorarioRequest" message="tns:modificarHorario" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/modificarHorarioResponse" message="tns:modificarHorarioResponse" />
+    </operation>
+    <operation name="eliminarHorario">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarHorarioRequest" message="tns:eliminarHorario" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarHorarioResponse" message="tns:eliminarHorarioResponse" />
+    </operation>
+    <operation name="insertarMaterial">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarMaterialRequest" message="tns:insertarMaterial" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarMaterialResponse" message="tns:insertarMaterialResponse" />
+    </operation>
+    <operation name="eliminarCurso">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarCursoRequest" message="tns:eliminarCurso" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/eliminarCursoResponse" message="tns:eliminarCursoResponse" />
+    </operation>
+    <operation name="insertarCurso">
+      <input wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarCursoRequest" message="tns:insertarCurso" />
+      <output wsam:Action="http://gestacad.services.astreiasoft.lp2.org/MallaWS/insertarCursoResponse" message="tns:insertarCursoResponse" />
+    </operation>
+  </portType>
+  <binding name="MallaWSPortBinding" type="tns:MallaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="asignarEstudiantesCursoProgramado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarCursoProgramadoEstudiantes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosProgramadosPorUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMaterialesPorCursoProgramado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarHorarioCursEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarHorarioCursDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerNombreCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAreaCurricular">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarEliminarArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAreasNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosPrograNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAreaCurricular">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerNombreArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="asignarDocenteCursoProgramado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAreaCurricular">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAreaCurricular">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosPrograTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosPrograGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCursoProgramado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCursoProgramado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCursoProgramado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarHorariosCursoPro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerNombreDocenteHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerNombreCursoHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosPorUsuarioYAnio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarGradosTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorarioPorSeccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="encontrarCursoProgramadoPorCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarEliminarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarCursoProgramado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorarioPorIdDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarCursoProgramadoDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMateriales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MallaWS">
+    <port name="MallaWSPort" binding="tns:MallaWSPortBinding">
+      <soap:address location="http://localhost:8080/AstreiaSoftWebServices/MallaWS" />
+    </port>
+  </service>
+</definitions>
